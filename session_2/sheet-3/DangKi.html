@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí thông tin</title>
+    <link rel="stylesheet" href="DangKy.css">
+</head>
+
+<body>
+    <form action="">
+        <h1>Phiếu đăng kí tham gia chương trình khuyến mại</h1>
+        <table border="1">
+            <tr>
+                <td>Họ và tên</td>
+                <td><input type="text" placeholder="Nguyễn Ngọc Quỳnh Nga"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" placeholder="2Bia Hùng Vương, Q10"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="number" maxlength="10" placeholder="0909097506"></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" name="gender" value="male" id="male">
+                    <label for="male">Nam</label>
+                    <input type="radio" name="gender" value="female" id="female">
+                    <label for="female">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Nghề nghiệp</td>
+                <td>
+                    <label for="job"></label>
+                    <select name="job" id="job">
+                        <option value="Giáo viên">Giáo viên</option>
+                        <option value="Bác sĩ">Bác sĩ</option>
+                        <option value="Công nhân">Công nhân</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="san_pham">Chọn sản phẩm tham gia</label>
+                </td>
+                <td>
+                    <select multiple size="4">
+                        <option value="kem_danh_rang">Kem đánh răng</option>
+                        <option value="bot_giat">Bột giặt</option>
+                        <option value="dau_goi">Dầu gội đầu</option>
+                        <option value="sua_tam">Sữa tắm</option>
+                    </select>
+                </td>
+            </tr>
+            <tr></tr>
+            <td>Số người dự đoán tham gia</td>
+            <td><input type="number" min="1" placeholder="250000"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center" class="but">
+                    <button type="submit">Đồng ý</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
