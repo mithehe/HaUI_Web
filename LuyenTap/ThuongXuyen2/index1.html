@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập</title>
+    <script>
+        function Gia() {
+            var gia = document.getElementById("loai").value;
+            document.getElementById("gia").value = gia;
+        }
+
+        function tinh() {
+            var gia = document.getElementById("gia").value;
+            var sl = document.getElementById("sl").value;
+
+            if (gia == 0 || sl <= 0) {
+                alert("Vui lòng chọn loại xăng và nhập số lượng!");
+                return;
+            }
+
+            var tien = gia * sl;
+            document.getElementById("tien").value = tien;
+        }
+
+        function xoa() {
+            document.getElementById("fullname").value = "";
+            document.getElementById("loai").value = 0;
+            document.getElementById("gia").value = "";
+            document.getElementById("sl").value = "";
+            document.getElementById("tien").value = "";
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <th>MUA XĂNG DẦU</th>
+            </tr>
+
+            <tr>
+                <td>Tên người mua: </td>
+                <td><input type="text" name="fullname" id="fullname" required></td>
+            </tr>
+
+            <tr>
+                <td>Loại xăng</td>
+                <td>
+                    <select id="loai" onchange="Gia()">
+                        <option value="0">Chọn loại xăng</option>
+                        <option value="20000">Ron 95</option>
+                        <option value="30000">Ron 98</option>
+                        <option value="30000">E10</option>
+                        <option value="30000">Diesel</option>
+                        <option value="30000">Xăng KC</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Giá(VNĐ/lít)</td>
+                <td><input type="text" name="gia" id="gia" readonly></td>
+            </tr>
+
+            <tr>
+                <td>Số lượng(lít)</td>
+                <td><input type="number" name="sl" id="sl"></td>
+            </tr>
+
+            <tr>
+                <td>Thành tiền</td>
+                <td><input type="text" name="tien" id="tien" readonly></td>
+            </tr>
+
+            <td colspan="2" align="center">
+                <button type="button" onclick="tinh()">Tính tiền</button>
+                <button type="button" onclick="xoa()">Xóa</button>
+            </td>
+        </table>
+    </form>
+</body>
+
+</html>
