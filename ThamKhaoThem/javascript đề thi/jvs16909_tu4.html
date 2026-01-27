@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhập chuỗi:</td>
+            <td><input type="text" id="chuoi"></td>
+        </tr>
+        <tr>
+            <td>Số từ có 4 ký tự:</td>
+            <td><input type="text" id="kq"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="tinh()">Tìm</button>
+                <button onclick="xoa()">Hủy bỏ</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        function xoa(){
+            document.getElementById('chuoi').value = "";
+            document.getElementById('kq').value = "";
+        }
+
+        function tinh(){
+            var chuoi = document.getElementById('chuoi').value;
+            var arr = chuoi.split(/\s+/);
+            var dem = 0;
+            for(var i=0; i < arr.length; i++){
+                if (arr[i].length == 4){
+                    dem ++;
+                }
+            }
+
+            document.getElementById('kq').value = dem;
+        }
+    </script>
+</body>
+</html>

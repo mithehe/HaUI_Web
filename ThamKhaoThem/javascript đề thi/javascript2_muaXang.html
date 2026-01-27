@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<script>
+    function hienGia(){
+        var gia = document.getElementById("loai").value;
+        document.getElementById("gia").value = gia;
+    }
+
+    function tinh(){
+        var gia = parseInt(document.getElementById("loai").value);
+        var so = parseFloat(document.getElementById("soluong").value);
+        if(isNaN(gia) || isNaN(so) || so <= 0){
+            alert("Vui lòng chọn loại xăng và nhập số lượng hợp lệ!");
+            return;
+        }
+        var tong = gia * so;
+        document.getElementById("thanhtien").value = tong.toLocaleString() + " VNĐ";
+    }
+
+    function xoa(){
+        document.getElementById("ten").value = "";
+        document.getElementById("loai").value = "0";
+        document.getElementById("gia").value = "";
+        document.getElementById("soluong").value = "";
+        document.getElementById("thanhtien").value = "";
+    }
+</script>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">MUA XĂNG DẦU</th>
+        </tr>
+        <tr>
+            <td>Tên người mua</td>
+            <td><input type="text" id="ten"></td>
+        </tr>
+        <tr>
+            <td>Loại xăng dầu</td>
+            <td>
+                <select id="loai" onchange="hienGia()">
+                    <option value="0">-- Chọn loại xăng --</option>
+                    <option value="21000">Ron95</option>
+                    <option value="20000">Ron98</option>
+                    <option value="19000">E10</option>
+                    <option value="18000">Diesel</option>
+                    <option value="17000">XăngKC</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Giá (VNĐ/lít)</td>
+            <td><input type="text" id="gia" readonly></td>
+        </tr>
+        <tr>
+            <td>Số lượng (lít)</td>
+            <td><input type="number" id="soluong"></td>
+        </tr>
+        <tr>
+            <td>Thành tiền</td>
+            <td><input type="text" id="thanhtien" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="tinh()">Tính</button>
+                <button onclick="xoa()">Xóa</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

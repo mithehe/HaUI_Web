@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKysXniR2-baaf1Qr-uB6TcOJeZc1zGIJuTQ&s);
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+}
+header .ten{
+    padding-right: 200px;
+}
+.ten h3{
+    color: #33ccff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33ccff;
+    height: 40px;
+}
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    width: 600px;
+    justify-content: space-around;
+}
+.menu ul li a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    line-height: 40px;
+    width: 120px;
+    text-align: center;
+}
+.menu ul li a:hover{
+    background-color: green;
+    color: yellow;
+}
+nav input{
+    margin-right: 200px;
+}
+.content{
+    width: 100%;
+    display: flex;
+}
+.sidebar{
+    width: 20%;
+}
+.sidebar h4{
+    background-color: #0066ff;
+    color: white;
+    padding: 5px;
+}
+.sidebar ul{
+    list-style-type: none;
+    background-color: #33ffff;
+}
+.sidebar ul li a{
+    text-decoration: none;
+    line-height: 40px;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    border: 1px solid black;
+    padding-left: 5px;
+}
+.sidebar ul li a:hover{
+    color: rgb(182, 182, 0);
+}
+.cha{
+    position: relative;
+}
+.con{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 200px;
+    display: none;
+}
+.cha:hover .con{
+    display: block;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin:0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">Sắp xếp mảng</th>
+        </tr>
+        <tr>
+            <td>Nhập mảng:</td>
+            <td><input type="text" id="mang"></td>
+        </tr>
+        <tr>
+            <td>Mảng sau khi sắp xếp:</td>
+            <td><input type="text" id="kq"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="xoa()">Hủy</button>
+                <button onclick="tinh()">Sắp xếp</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        function xoa(){
+            document.getElementById('mang').value = "";
+            document.getElementById('kq').value = "";
+        }
+
+        function tinh(){
+            var mang = document.getElementById('mang').value;
+            var arr = mang.split(",");
+            var chan = [];
+            var le = [];
+            var zero = [];
+
+            for(var i=0; i<arr.length; i++){
+                var num = parseInt(arr[i]);
+                if(isNaN(num)){
+                    alert("Vui lòng nhập lại!");
+                    return;
+                }
+                else if (num === 0){
+                    zero.push(num);
+                }
+                else if (num % 2 === 0){
+                    chan.push(num);
+                }
+                else{
+                    le.push(num);
+                }
+            }
+
+            var kq = chan.concat(zero, le);
+            document.getElementById('kq').value = kq;
+        }
+    </script>
+</body>
+</html>

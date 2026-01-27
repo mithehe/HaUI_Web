@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            margin: 10px auto;
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhập số nguyên:</td>
+            <td><input type="text" id="so"></td>
+        </tr>
+        <tr>
+            <td>Số chữ số lẻ:</td>
+            <td><input type="text" id="kq" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="tinh()">Đếm</button>
+                <button onclick="xoa()">Hủy bỏ</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        function tinh(){
+            var x = parseInt(document.getElementById("so").value)
+
+            if (isNaN(x) || x<= 0){
+                alert("Vui lòng nhập số nguyên dương hợp lệ!");
+                return;
+            }
+
+            var SCS = 0;
+            while( x > 0){
+                const chusoCuoi = x % 10;
+                if(chusoCuoi % 2 != 0){
+                    SCS++;
+                }
+                x = Math.floor(x/10);
+            }
+            document.getElementById("kq").value = SCS;
+        }
+
+        function xoa(){
+            document.getElementById("so").value = ""
+            document.getElementById("kq").value = ""
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+*{ margin:0; padding:0; box-sizing: border-box;}
+header{
+    background-color: blueviolet;
+    color:aliceblue;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    left: 20px;
+    top:13px;
+}
+.cty{
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(101, 28, 169); /* Màu nền tối cho thanh điều hướng */
+    display: flex; /* Bật Flexbox để căn chỉnh các mục (menu và search) */
+    justify-content: space-between; /* Đẩy menu và search ra hai bên */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+nav>ul{
+    display: flex;
+    list-style: none;
+    padding: 0 30px;
+}
+nav ul li a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: white; /* Màu chữ trắng */
+    padding: 10px 30px;
+    display: block; /* Giúp toàn bộ khu vực liên kết có thể click */
+}
+nav ul li a:hover {
+    background-color: #575757; 
+}
+.cha{
+    position: relative;
+}
+.con {
+    display: none; /* **Mặc định ẩn menu con** */
+    position: absolute; /* Đặt menu con lên trên nội dung khác */
+    top: 100%; /* Bắt đầu ngay dưới mục cha */
+    left: 0;
+    background-color: rgb(101, 28, 169); /* Màu nền cho menu con */
+    min-width:200px; /* Đảm bảo menu con đủ rộng */
+    list-style: none;
+    z-index: 10; /* Đảm bảo menu con nằm trên các phần tử khác */
+}
+.cha:hover .con {
+    display: block; /* **Hiện menu con khi rê chuột vào <li> cha** */
+}
+.search{
+    padding-right: 100px;
+}
+.banner img{
+    width: 100%;
+    height: 300px;
+}
+.item img{
+    width: 330px;
+    height: 200px;
+}
+.title{
+    font-weight: bold;;
+}
+article {
+    max-width: 1200px;
+    margin: 20px auto; /* Căn giữa và tạo khoảng cách */
+    padding: 0 20px;
+    display: flex; /* Bật Flexbox để chia cột */
+    gap: 30px; /* Khoảng cách giữa các cột */
+    justify-content: space-between; /* Tối ưu hóa khoảng cách */
+}
+footer{
+    background-color: rgb(101, 28, 169);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.about h3{
+    color:aliceblue;
+}
+.about ul {
+    list-style: none;
+}
+.about ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+}

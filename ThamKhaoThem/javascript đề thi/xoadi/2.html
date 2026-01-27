@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            background-color: #00cc33;
+            align-items: center;
+        }
+        nav input{
+            margin-right: 30px;
+        }
+        .menu>ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            width: 800px;
+            height: 40px;
+        }
+        .menu ul li a{
+            text-decoration: none;
+            color: white;
+            line-height: 40px;
+            display: inline-block;
+            padding: 0 10px;
+        }
+        .menu ul li a:hover{
+            background-color: green;
+        }
+        .cha{
+            position: relative;
+        }
+        .con{
+            position: absolute;
+            background-color: #00cc33;
+            list-style-type: none;
+            display: none;
+        }
+        .cha>ul>li>a{
+            width: 200px;
+        }
+        .cha:hover .con{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="">GIỚI THIỆU</a></li>
+                <li><a href="">DỊCH VỤ</a></li>
+                <li class="cha"><a href="">THỰC PHẨM TƯƠI SỐNG</a>
+                    <ul class="con">
+                        <li><a href="">Rau, củ, quả</a></li>
+                        <li><a href="">Thịt heo</a></li>
+                        <li><a href="">Cá</a></li>
+                        <li><a href="">Trứng</a></li>
+                        <li><a href="">Gia vị</a></li>
+                        <li><a href="">Thực phẩm khô</a></li>
+                    </ul>
+                </li>
+                <li><a href="">SUẤT ĂN CÔNG NGHIỆP</a></li>
+                <li><a href="">TIN TỨC</a></li>
+                <li><a href="">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+        <input type="text" placeholder="Nhập từ khóa tìm kiếm">
+   </nav>
+</body>
+</html>

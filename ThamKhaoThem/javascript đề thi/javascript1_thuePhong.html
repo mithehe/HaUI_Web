@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+      </style>
+</head>
+<script>
+    function hienGia() {
+        var gia = document.getElementById('loaiphong').value;
+        document.getElementById('gia').value = gia;
+    }
+
+    function tinh() {
+        var gia = parseInt(document.getElementById('loaiphong').value);
+        var ngay = parseInt(document.getElementById('songay').value);
+        if (isNaN(gia) || isNaN(ngay) || ngay <= 0) {
+            alert("Vui lòng chọn loại phòng và nhập số ngày hợp lệ!");
+            return;
+        }
+        var kq = gia * ngay;
+        document.getElementById('thanhtien').value = kq.toLocaleString() + " VNĐ";
+    }
+
+    function xoa() {
+        document.getElementById('hoten').value = "";
+        document.getElementById('loaiphong').value = "0";
+        document.getElementById('gia').value = "";
+        document.getElementById('songay').value = "";
+        document.getElementById('thanhtien').value = "";
+    }
+</script>
+<body>
+     <table>
+        <tr>
+            <th colspan="2">THUÊ PHÒNG</th>
+        </tr>
+        <tr>
+            <td>Tên người thuê</td>
+            <td><input type="text" id="hoten"></td>
+        </tr>
+        <tr>
+            <td>Loại phòng</td>
+            <td>
+                <select id="loaiphong" onchange="hienGia()">
+                    <option value="0">-- Chọn loại phòng --</option>
+                    <option value="1000000">Phòng 6 người</option>
+                    <option value="800000">Phòng 5 người</option>
+                    <option value="700000">Phòng 4 người</option>
+                    <option value="600000">Phòng 3 người</option>
+                    <option value="400000">Phòng 1 người</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Giá (VNĐ/ngày)</td>
+            <td><input type="text" id="gia" readonly></td>
+        </tr>
+        <tr>
+            <td>Số ngày thuê</td>
+            <td><input type="number" id="songay"></td>
+        </tr>
+        <tr>
+            <td>Thành tiền</td>
+            <td><input type="text" id="thanhtien" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="tinh()">Tính</button>
+                <button onclick="xoa()">Xóa</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

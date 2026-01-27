@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        input{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">SẮP CÂU THEO QUY LUẬT</th>
+        </tr>
+        <tr>
+            <td>Nhập câu ban đầu:</td>
+            <td><input type="text" id="chuoi"></td>
+        </tr>
+        <tr>
+            <td>Câu sau khi xếp lại:</td>
+            <td><input type="text" id="kq" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="xoa()">Xóa</button>
+                <button onclick="tinh()">Viết lại</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function xoa(){
+            document.getElementById('chuoi').value = "";
+            document.getElementById('kq').value = "";
+        }
+
+        function tinh(){
+            var chuoi = document.getElementById('chuoi').value;
+            var arr = chuoi.split(" ");
+            if(arr.length > 20){
+                alert("Câu không quá 20 từ.");
+                return;
+            }
+            for(var i=0; i<arr.length; i++){
+                if(arr[i].length > 10){
+                    alert("Mỗi từ không quá 10 kí tự.");
+                    return;
+                }
+            }
+            arr.sort();
+            document.getElementById('kq').value = arr.join(' ');
+        }
+    </script>
+</body>
+</html>

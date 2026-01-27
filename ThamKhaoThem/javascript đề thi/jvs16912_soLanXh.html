@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhập chuỗi:</td>
+            <td><input type="text" id="chuoi" maxlength="255"></td>
+        </tr>
+        <tr>
+            <td>Nhập từ:</td>
+            <td><input type="text" id="tu"></td>
+        </tr>
+        <tr>
+            <td>Thông báo:</td>
+            <td><input type="text" id="kq"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="tinh()">Kiểm tra</button>
+                <button onclick="xoa()">Hủy bỏ</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        function xoa(){
+            document.getElementById('chuoi').value = "";
+            document.getElementById('tu').value = "";
+            document.getElementById('kq').value = "";
+        }
+
+        function tinh(){
+            var chuoi = document.getElementById('chuoi').value;
+            var tu = document.getElementById('tu').value;
+            var arr = chuoi.split(/\s+/);
+            var dem = 0;
+            for(var i=0; i< arr.length; i++){
+                if (arr[i] === tu){
+                    dem ++;
+                }
+            }
+            document.getElementById('kq').value = dem;
+        }
+    </script>
+</body>
+</html>

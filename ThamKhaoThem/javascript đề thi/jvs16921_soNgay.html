@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Tháng:</td>
+            <td><input type="text" id="month"></td>
+            <td>Năm:</td>
+            <td><input type="text" id="year"></td>
+        </tr>
+        <tr>
+            <td>Số ngày:</td>
+            <td><input type="text" id="kq"></td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center">
+                <button onclick="tinh()">Hiển thị số ngày của tháng</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        function tinh(){
+            var thang = parseInt(document.getElementById('month').value);
+            var nam = parseInt(document.getElementById('year').value);
+            
+            if(isNaN(thang) || isNaN(nam) || thang>12){
+                alert("Vui lòng nhập lại!");
+                document.getElementById('month').value = "";
+                document.getElementById('year').value = "";
+                document.getElementById('kq').value = "";
+                return;
+            }
+
+            var ngay;
+            switch(thang){
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                    ngay = 31;
+                    break;
+                case 4: case 6: case 9: case 11:
+                    ngay = 30;
+                    break;
+                case 2:
+                    if(nam%400===0 || (nam%4===0 && nam%100!=0)){
+                        ngay = 29;
+                    }
+                    else{
+                        ngay = 28;
+                    }
+                    break;
+            }
+            document.getElementById('kq').value = ngay;
+        }
+    </script>
+</body>
+</html>

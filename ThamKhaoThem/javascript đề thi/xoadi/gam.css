@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 30px;
+    height: 30px;
+}
+header input{
+    margin-right: 200px;
+}
+.sidebar1{
+    background-image: url(https://noithatmanhhung.vn/wp-content/uploads/2023/12/xu-huong-thiet-ke-noi-that-tan-co-dien-003-542.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+}
+.container{
+    width: 100%;
+    display: flex;
+}
+.menu{
+    width: 20%;
+    background-color: #36e791;
+}
+.menu ul{
+    list-style-type: none;
+    width: 100%;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    line-height: 40px;
+    padding-left: 10px;
+    border: 1px solid black;
+    display: inline-block;
+    width: 100%;
+}
+.menu ul li a:hover{
+    background-color: #b0d5d0;
+}
+.cha{
+    position: relative;
+}
+.con{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 100;
+    background-color: #36e791;
+    display: none;
+}
+.cha:hover .con{
+    display: block;
+}
+.content{
+    width: 80%;
+}
+.luot{
+    display: flex;
+    justify-content: space-between;
+}
+.item img{
+    width: 250px;
+    height: 200px;
+    transition: transform 0.3 ease;
+}
+.item img:hover{
+    transform: scale(1.08);
+}
+article{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.lienhe{
+    color: #9bcdf1;
+}
+.ten:hover{
+    color: red;
+}
+footer{
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    background-color: #3ba66b;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}

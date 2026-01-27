@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Họ và tên:</td>
+            <td><input type="text" id="hoten"></td>
+        </tr>
+        <tr>
+            <td>Tên:</td>
+            <td><input type="text" id="kq"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="tinh()">Hiển thị</button>
+                <button onclick="xoa()">Hủy bỏ</button>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+        function xoa(){
+            document.getElementById('hoten').value = ""
+            document.getElementById('kq').value = ""
+        }
+
+        function tinh(){
+            var chuoi = document.getElementById('hoten').value;
+            var arr = chuoi.split(/\s+/);
+            var ten = arr[arr.length - 1];
+            document.getElementById('kq').value = ten; 
+        }
+    </script>
+</body>
+</html>
+<!--
+ value dùng cho input
+ innerHTML dùng cho <div> <p> <span>
+  -->

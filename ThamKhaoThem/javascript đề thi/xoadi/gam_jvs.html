@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">Tìm từ dài nhất</th>
+        </tr>
+        <tr>
+            <td>Nhập xâu:</td>
+            <td><input type="text" id="xau"></td>
+        </tr>
+        <tr>
+            <td>Thông báo kết quả:</td>
+            <td><input type="text" id="kq" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button onclick="xoa()">Xóa</button>
+                <button onclick="tinh()">Tìm kiếm</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function xoa(){
+            document.getElementById('xau').value = "";
+            document.getElementById('kq').value = "";
+        }
+
+        function tinh(){
+            var xau = document.getElementById('xau').value;
+            var arr = xau.split(/\s+/);
+            var max = arr[0];
+            for(var i=0; i< arr.length; i++){
+                if(arr[i].length > max.length){
+                max = arr[i];
+                }
+            }
+            kq = xau.indexOf(max);
+            document.getElementById('kq').value = kq;
+        }
+
+    </script>
+</body>
+</html>
