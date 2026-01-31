@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+header img{
+    width: 150px;
+    height: 70px;
+}
+
+.shoppe{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.shoppe img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-bar{
+    padding: 0 12px;
+    margin-top: 18px;
+    background-color: #ff3399;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    padding: 12px 0px;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.menu{
+    width: 18%;
+}
+
+.menu h3{
+    background-color: #ffcc33;
+    color: black;
+    padding: 12px 16px;
+}
+
+.menu-level-1{
+    list-style: none;
+    border: 1px solid #999999;
+}
+
+.menu-level-1 > li {
+    position: relative;
+}
+
+.menu-level-1 > li > a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 12px 16px;
+}
+
+.menu-level-1 > li > a:hover{
+    background-color: aliceblue;
+}
+
+.menu-level-2{
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    list-style: none;
+}
+
+.menu-level-2 li a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 12px 16px;
+}
+
+.menu-level-2 li a:hover{
+    background-color: aliceblue;
+}
+
+.menu-level-1 > li:hover .menu-level-2{
+    display: block;
+}
+
+.content{
+    width: 80%;
+    padding: 0 12px;
+}
+
+.productList{
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.product{
+    display: flex;
+    width: 48%;
+    height: 200px;
+    border: 1px solid #999999;
+}
+
+.product img{
+    margin: auto 12px;
+    width: 30%;
+    height: 50%;
+}
+
+.title{
+    font-weight: bold;
+    margin-top: 12px;
+    margin: auto 0;
+}
+
+.product-price{
+    color: red;
+}
+
+button{
+    background-color: rgb(185, 185, 185);
+    border-radius: 5px;
+    border: none;
+    height: 32px;
+    width: 100px;
+}
+
+.product-card{
+    display: flex;
+    justify-content: space-between;  
+    margin-top: 12px;
+}
+
+.card{
+    height: 100px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #999999;
+}
+
+.card img{
+    width: 60px;
+    height: 60px;
+}
+
+.card-title{
+    font-weight: bold;
+}
+
+.card:first-child{
+    background-color: #33cc66;
+}
+
+.card:nth-child(2){
+    background-color: #ff6666;
+}
+
+.card:last-child{
+    background-color: #ff66ff;
+}

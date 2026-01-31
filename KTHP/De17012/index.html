@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 17012</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="">
+
+        <div class="search-box">
+            <input type="text" placeholder="Search entire store here...">
+            <button>Search</button>
+        </div>
+
+
+        <div class="cart">
+            <img src="logo.png" alt="">
+            <div class="title">
+                <p style="font-weight: bold;">Shopping Cart</p>
+                <p>0 items / $0.00</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu">
+        <ul class="menu-level-1">
+            <li>
+                <a href="">GIỚI THIỆU</a>
+            </li>
+            <li>
+                <a href="">DỊCH VỤ</a>
+            </li>
+            <li>
+                <a href="">THỰC PHẨM TƯƠI SỐNG</a>
+                <ul class="menu-level-2">
+                    <li>
+                        <a href="">Rau, củ, quả</a>
+                    </li>
+                    <li>
+                        <a href="">Thịt Heo</a>
+                    </li>
+                    <li>
+                        <a href="">Cá</a>
+                    </li>
+                    <li>
+                        <a href="">Trứng</a>
+                    </li>
+                    <li>
+                        <a href="">Gia vị</a>
+                    </li>
+                    <li>
+                        <a href="">Thực phẩm khô</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">SUẤT ĂN CÔNG NGHIỆP</a>
+            </li>
+            <li>
+                <a href="">TIN TỨC</a>
+            </li>
+            <li>
+                <a href="">LIÊN HỆ</a>
+            </li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Nhập từ khóa tìm kiếm...">
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="sidebar">
+            <input type="text" name="" id="search" placeholder="Tìm kiếm sản phẩm dịch vụ">
+
+            <div class="card">
+                <h3>RAU, CỦ, QUẢ TƯƠI</h3>
+                <div class="contact">
+                    <h3>THÔNG TIN LIÊN HỆ</h3>
+                    <hr>
+                    <img src="logo.png" alt="">
+                    <p class="name">MR.NGUYỄN VĂN TUẤN</p>
+                    <p>Giám đốc - <i class="phone">0971 001 003</i></p>
+                    <p>Email: <i>thanhnamfood123@gmail.com</i></p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="productList">
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Cà chua</p>
+            </div>
+        </div>
+    </div>
+
+    <form action="">
+        <table border="1">
+            <tr>
+                <th colspan="2">Tìm từ dài nhất</th>
+            </tr>
+
+            <tr>
+                <td>Nhập xâu</td>
+                <td>
+                    <input type="text" name="" id="string" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thông báo kết quả:</td>
+                <td>
+                    <input type="text" name="" id="result" readonly>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="reset">Xóa</button>
+                    <button type="button" onclick="searchMax()">Tìm kiếm</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function searchMax(){
+            var stringg = document.getElementById("string").value;
+
+            if(stringg.trim() === "" || stringg.length > 255){
+                alert("Nhập đúng yêu cầu đề bài!");
+                return;
+            }
+
+            var arr = stringg.split(/\s+/);
+            var maxWord = arr[0];
+            for(var i = 1; i < arr.length; i++){
+                if(arr[i].length > maxWord.length){
+                    maxWord = arr[i];
+                }
+            }
+            document.getElementById("result").value = maxWord;
+        }
+    </script>
+</body>
+
+</html>

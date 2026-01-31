@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 16767</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function check() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+
+            if (user === "" || pass === "") {
+                alert("Bạn nhập sai");
+                return;
+            }
+
+            if (pass.length < 8) {
+                alert("Bạn nhập sai");
+                return;
+            }
+
+            if (!isNaN(pass.charAt(0))) {
+                alert("Bạn nhập sai");
+                return;
+            }
+
+            // check uppercase letter
+            var hasUpperCase = /[A-Z]/.test(pass);
+
+            //  check special character
+            var hasSpecialChar = /[^A-Za-z0-9]/.test(pass);
+
+            if (hasUpperCase && hasSpecialChar) {
+                alert("Bạn nhập đúng");
+            } else {
+                alert("Bạn nhập sai");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="">
+
+        <div class="info">
+            <h1>BAO THACH MINERAL & PRODUCTION COMPANY LINITED</h1>
+            <p>Address: But Phong Village, Lien Son Commune, Kim Bang District, Ha Nam Province</p>
+        </div>
+    </header>
+
+    <section class="navbar">
+        <nav>
+            <ul class="header-nav">
+                <li>
+                    <a href="#">TRANG CHỦ</a>
+                </li>
+                <li>
+                    <a href="#">SẢN PHẨM</a>
+                </li>
+                <li>
+                    <a href="#">GIỚI THIỆU</a>
+                </li>
+                <li>
+                    <a href="#">TIN TỨC</a>
+                </li>
+                <li>
+                    <a href="#">LIÊN HỆ</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="language">
+            <img src="logo.png" alt="">
+            <img src="logo.png" alt="">
+        </div>
+
+        <div class="search">
+            <input type="text" id="input" placeholder="Nhập từ khóa tìm kiếm      ">
+        </div>
+    </section>
+
+    <main>
+        <div class="menu">
+            <nav>
+                <ul class="menu-level-1">
+                    <li>
+                        <a href="#">NL Ngành thức ăn chăn nuôi</a>
+                    </li>
+                    <li>
+                        <a href="#">NL Ngành thủy hải sản</a>
+                    </li>
+                    <li>
+                        <a href="#">NL Ngành sản xuất phân bón</a>
+                    </li>
+                    <li>
+                        <a href="#">Nguyên Vật Liệu Xây Dựng</a>
+                    </li>
+                    <li>
+                        <a href="#">Các ngành khác</a>
+                        <ul class="menu-level-2">
+                            <li>
+                                <a href="#">NL ngành kính</a>
+                            </li>
+                            <li>
+                                <a href="#">NL ngành luyện kim</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <div class="left">
+                <img src="logo.png" alt="">
+                <img src="logo.png" alt="">
+                <img src="logo.png" alt="">
+            </div>
+
+            <div class="right">
+                <div class="item">
+                    <img src="logo.png" alt="">
+                    <p class="title">Đá dẵm trang trí sân vườn</p>
+                    <p class="contact">Liên hệ</p>
+                </div>
+                <div class="item">
+                    <img src="logo.png" alt="">
+                    <p class="title">Sỏi đen nhân tạo</p>
+                    <p class="contact">Liên hệ</p>
+                </div>
+                <div class="item">
+                    <img src="logo.png" alt="">
+                    <p class="title">Sỏi màu vàng trang trí</p>
+                    <p class="contact">Liên hệ</p>
+                </div>
+                <div class="item">
+                    <img src="logo.png" alt="">
+                    <p class="title">Sỏi hồng trang trí</p>
+                    <p class="contact">Liên hệ</p>
+                </div>
+                <div class="item">
+                    <img src="logo.png" alt="">
+                    <p class="title">Sỏi đen bóng nhập khẩu</p>
+                    <p class="contact">Liên hệ</p>
+                </div>
+                <div class="item">
+                    <img src="logo.png" alt="">
+                    <p class="title">Sỏi xám vân mây</p>
+                    <p class="contact">Liên hệ</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- //javascript file -->
+    <form action="">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" minlength="8">
+        <br>
+        <button onclick="check()">Kiểm tra Password</button>
+    </form>
+</body>
+
+</html>

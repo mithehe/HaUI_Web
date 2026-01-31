@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 16912</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <img src="logo.png" alt="">
+            <p>Business Areas</p>
+        </div>
+
+        <div class="right">
+            <div class="country">
+                <img src="logo.png" alt="">
+                <p>Viet Nam</p>
+            </div>
+            <input type="search" placeholder="Tìm kiếm">
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu-level-1">
+            <li>
+                <a href="#">TRANG CHỦ</a>
+            </li>
+            <li>
+                <a href="#">GIỚI THIỆU</a>
+            </li>
+            <li>
+                <a href="#">SẢN PHẨM</a>
+                <ul class="menu-level-2">
+                    <li>
+                        <a href="#">Sơn Dulux</a>
+                    </li>
+                    <li>
+                        <a href="#">Sơn Maxilite</a>
+                    </li>
+                    <li>
+                        <a href="#">Sơn Jotun</a>
+                    </li>
+                    <li>
+                        <a href="#">Sơn Epoxy</a>
+                    </li>
+                    <li>
+                        <a href="#">Chông thấm</a>
+                    </li>
+                    <li>
+                        <a href="#">Dịch vụ diệt mối</a>
+                    </li>
+                    <li>
+                        <a href="#">Sơn và chống thấm BK</a>
+                    </li>
+                    <li>
+                        <a href="#">Sơn kết cấu thép</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">TƯ VẤN</a>
+            </li>
+            <li>
+                <a href="#">TUYỂN DỤNG</a>
+            </li>
+            <li>
+                <a href="#">TIN TỨC</a>
+            </li>
+            <li>
+                <a href="#">KHÁCH HÀNG</a>
+            </li>
+            <li>
+                <a href="#">LIÊN HỆ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <h3>CHỐNG THẤM</h3>
+
+        <div class="choice">
+            <section>
+                <label for="choice">Sắp xếp theo</label>
+                <select name="choice" id="choice">
+                    <option value="">Mặc định</option>
+                    <option value="">Mặc định</option>
+                    <option value="">Mặc định</option>
+                    <option value="">Mặc định</option>
+                </select>
+            </section>
+
+            <section>
+                <label for="display">Hiển thị</label>
+                <select name="display" id="display">
+                    <option value="">36</option>
+                    <option value="">36</option>
+                    <option value="">36</option>
+                    <option value="">36</option>
+                </select>
+            </section>
+
+        </div>
+
+        <div class="productList">
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+            <div class="product">
+                <img src="logo.png" alt="">
+                <p>Sơn Polyrethan Chống thấm NeoMax</p>
+                <p class="contact">Vui lòng gọi</p>
+            </div>
+        </div>
+
+    </main>
+
+    <form action="">
+        <table>
+            <tr>
+                <th colspan="2">Javascript</th>
+            </tr>
+
+            <tr>
+                <td>Nhập chuỗi</td>
+                <td>
+                    <input type="text" name="Stringg" id="Stringg">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Nhập từ</td>
+                <td>
+                    <input type="text" name="tu" id="tu">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Thông báo</td>
+                <td>
+                    <input type="text" name="String" id="String">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="displayMessage()">
+                        Kiểm tra
+                    </button>
+                    <button type="reset">Hủy bỏ</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function displayMessage(){
+            var a = document.getElementById("Stringg").value;
+            var b = document.getElementById("tu").value;
+
+            if(a.trim() === "" || b.trim() === "" || a.length > 255){
+                alert("Vui lòng nhập đúng đầu bài");
+                return;
+            }
+
+            var arr = a.split(/\s+/);
+            var count = 0;
+            for(var i = 0; i < arr.length; i++){
+                if(arr[i] === b){
+                    count++;
+                }
+            }
+            document.getElementById("String").value = count;
+        }
+    </script>
+</body>
+
+</html>

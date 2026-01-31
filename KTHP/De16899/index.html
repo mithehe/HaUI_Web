@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 16899</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="">
+
+        <div class="shoppe">
+            <img src="logo.png" alt="">
+            <p>Cart</p>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Brands</a>
+            </li>
+            <li>
+                <a href="#">Gift Certificates</a>
+            </li>
+            <li>
+                <a href="#">More</a>
+            </li>
+        </ul>
+
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+    </nav>
+
+    <main>
+        <div class="menu">
+            <h3>CATEGORIES</h3>
+            <ul class="menu-level-1">
+                <li>
+                    <a href="#">Roses</a>
+                </li>
+                <li>
+                    <a href="#">Flower Basket</a>
+                    <ul class="menu-level-2">
+                        <li>
+                            <a href="#">Macs</a>
+                        </li>
+                        <li>
+                            <a href="#">Windows</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Gerberas</a>
+                </li>
+                <li>
+                    <a href="#">Orchids</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>SPECIAL</h3>
+            <hr>
+
+            <div class="productList">
+                <div class="product">
+                    <img src="logo.png" alt="">
+                    <div class="title">
+                        <p>Aliquam Quaerat Voluptatem</p>
+                        <p class="product-price">$110.00 <del>$122.00</del></p>
+                        <button>+Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="logo.png" alt="">
+                    <div class="title">
+                        <p>Aliquam Quaerat Voluptatem</p>
+                        <p class="product-price">$110.00 <del>$122.00</del></p>
+                        <button>+Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="logo.png" alt="">
+                    <div class="title">
+                        <p>Aliquam Quaerat Voluptatem</p>
+                        <p class="product-price">$110.00 <del>$122.00</del></p>
+                        <button>+Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="logo.png" alt="">
+                    <div class="title">
+                        <p>Aliquam Quaerat Voluptatem</p>
+                        <p class="product-price">$110.00 <del>$122.00</del></p>
+                        <button>+Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card">
+                    <img src="logo.png" alt="">
+                    <div>
+                        <p class="card-title">Seasonal Stock</p>
+                        <p>Occassional Items</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="logo.png" alt="">
+                    <div>
+                        <p class="card-title">Seasonal Stock</p>
+                        <p>Occassional Items</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="logo.png" alt="">
+                    <div>
+                        <p class="card-title">Seasonal Stock</p>
+                        <p>Occassional Items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <form action="">
+        <table border="1">
+            <tr>
+                <th colspan="2">Phần Javascript</th>
+            </tr>
+
+            <tr>
+                <td>Họ và tên </td>
+                <td><input type="text" name="fullname" id="fullName"></td>
+            </tr>
+
+            <tr>
+                <td>Tên</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <button type="button" onclick="displayName()">Hiển thị</button>
+                    <button type="reset">Hủy bỏ</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function displayName() {
+            var fullName = document.getElementById("fullName").value;
+
+            if (fullName.trim() === "") {
+                alert("Vui lòng nhập họ và tên đầy đủ");
+                return;
+            }
+
+            var arr = fullName.split(/\s+/);
+            var name = arr[arr.length - 1];
+            document.getElementById("name").value = name;
+        }
+    </script>
+</body>
+
+</html>

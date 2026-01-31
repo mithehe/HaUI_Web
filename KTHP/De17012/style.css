@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 15px 40px;
+    height: 100px;
+}
+
+.cart{
+    display: flex;
+    align-content: center;
+    gap: 16px;
+}
+
+.title{
+    margin: auto;
+}
+
+.search-box {
+    display: flex;
+    width: 500px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.menu{
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px;
+}
+
+.menu-level-1{
+    display: flex;
+    list-style: none;
+}
+
+.menu-level-1 > li{
+    position: relative;
+}
+
+.menu-level-1 > li > a{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 12px 15px;
+}
+
+.menu-level-1 > li > a:hover{
+    background-color: #246526
+}
+
+.menu-level-2{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #4CAF50;
+    width: 100%;
+}
+
+.menu-level-2 > li > a{
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 12px 15px;
+    border: 1px solid white;
+    
+}
+
+.menu-level-2 > li > a:hover{
+    background-color: #246526
+}
+
+.menu-level-1 li:hover .menu-level-2{
+    display: block;
+}
+
+.search{
+    margin: 12px 8px;
+}
+
+.container{
+    display: flex;
+    margin-left: 12px;
+}
+
+#search{
+    margin-top: 18px;
+    height: 32px;
+    width: 100%;
+}
+
+.card{
+    margin-top: 18px;   
+}
+
+.card > h3{
+    background-color: gainsboro;
+    color:#246526;
+    padding: 12px;
+}
+
+.contact{
+    margin-top: 32px;
+    text-align: center;
+}
+
+.contact img{
+    margin: 12px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name, i{
+    color: rgb(104, 203, 225);
+    font-weight: bold;
+}
+
+.productList{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.product{
+    width: calc(80% / 4);
+    display: flex;
+    flex-direction: column;
+}
+
+.product img{
+    border: 1px solid gray;
+    height: 200px;
+    padding: 16px;
+}
+
+.product p{
+    text-align: center;
+}
+

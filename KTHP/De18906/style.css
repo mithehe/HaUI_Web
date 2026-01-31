@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12px 0;
+}
+
+header p{
+    background-color: #ff3399;
+    color: white;
+    height: 32px;
+    width: 120px;
+    padding: 8px;
+}
+
+header p:hover{
+    background-color: rgb(252, 252, 148);
+    color: red;
+}
+
+.menu-level-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: black;
+}
+
+.menu-level-1 > li{
+    position: relative;
+}
+
+.menu-level-1 > li > a{
+    display: block;
+    color: white;padding: 12px 15px;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-level-1 > li > a:hover{
+    background-color: #ff3399;
+}
+
+.menu-level-2{
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+}
+
+.menu-level-2 li a{
+    display: block;
+    color: black;
+    padding: 12px 15px;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-level-2 > li > a:hover{
+    background-color: #ff3399;
+}
+
+.menu-level-1 li:hover .menu-level-2{
+    display: block;
+}
+
+.productList{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product img{
+    width: 400px;
+    height: 300px;
+}
+
+.product img:hover{
+    width: 500px;
+    height: 400px;
+}
+
+
+.product-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #003366;
+    padding: 12px 12px;
+}
+
+.product-rating img{
+    width: 10px;
+    height: 10px;
+    margin: 8px 0;
+}
+
+.product-name{
+    font-weight: bold;
+    color: white;
+}
+
+.product-name:hover{
+    color: yellow;
+}
+
+del{
+    color: white;
+}
+
+p{
+    color: red;
+    font-weight: bold;
+}
+
+form{
+    background-color: #dbeaf9;
+    width: max-content;
+    margin:  12px auto;
+    border: 2px dotted #003366;
+}
+

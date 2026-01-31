@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    margin-top: 16px;
+    margin-left: 12px;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.logo img {
+    width: 70px;
+    height: 32px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+    flex: 2;
+    align-items: center;
+    background-color: yellow;
+}
+
+.icons img {
+    width: 70px;
+    height: 32px;
+}
+
+.icon {
+    margin: 12px 0;
+    text-align: center;
+    color: black;
+    font-size: 14px;
+}
+
+.icon:hover {
+    color: red;
+    background-color: white;
+}
+
+main {
+    display: flex;
+}
+
+.menu {
+    width: 500px;
+}
+
+.menu-level-1 h3 {
+    background-color: #336699;
+    color: white;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-level-1 {
+    list-style: none;
+    background-color: #cccccc;
+    color: black;
+}
+
+.menu-level-1 li {
+    position: relative;
+}
+
+.menu-level-1>li>a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    border: 1px dotted black;
+}
+
+.menu-level-1>li>a:hover {
+    color: #ffff33;
+}
+
+.menu-level-2 {
+    width: 200px;
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 0;
+    left: 100%;
+}
+
+.menu-level-2 li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    border: 1px dotted black;
+}
+
+.menu-level-2 li a:hover {
+    color: #ffff33;
+}
+
+.menu-level-1 li:hover .menu-level-2 {
+    display: block;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #cccccc;
+    height: 32px;
+    align-items: center;
+}
+
+.content-header h3 {
+    font-weight: bold;
+}
+
+option:hover {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    width: 25%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    ;
+}
+
+.product img {
+    width: 150px;
+    height: 150px;
+    margin-top: 12px;
+}
+
+.product-price {
+    color: red;
+    font-weight: bold;
+}
+
+.product-name:hover {
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
